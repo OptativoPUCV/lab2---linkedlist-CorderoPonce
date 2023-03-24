@@ -122,3 +122,24 @@ Fri 24 Mar 2023 04:18:27 PM UTC:
  tests:  1|5
 total_score: 10/70
 297b59f
+Fri 24 Mar 2023 05:36:36 PM UTC: 
+ list.c | 2 ++
+ 1 file changed, 2 insertions(+)
+In file included from test.c:5:
+list.c: In function ‘firstList’:
+list.c:45:3: error: statement with no effect [-Werror=unused-value]
+   45 |   list
+      |   ^~~~
+list.c:45:7: error: expected ‘;’ before ‘return’
+   45 |   list
+      |       ^
+      |       ;
+......
+   50 |   return NULL;
+      |   ~~~~~~
+list.c:51:1: error: control reaches end of non-void function [-Werror=return-type]
+   51 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+9bf92b9
