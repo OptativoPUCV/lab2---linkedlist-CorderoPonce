@@ -311,3 +311,20 @@ list.c:98:9: error: unused variable ‘nuevo’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 6945313
+Fri 24 Mar 2023 06:42:29 PM UTC: 
+ list.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:5:
+list.c: In function ‘pushFront’:
+list.c:102:10: error: ‘return’ with a value, in function returning void [-Werror=return-type]
+  102 |   return NULL;
+      |          ^~~~
+list.c:97:6: note: declared here
+   97 | void pushFront(List * list, void * data) {
+      |      ^~~~~~~~~
+list.c:98:9: error: unused variable ‘nuevo’ [-Werror=unused-variable]
+   98 |   Node *nuevo = createNode(data);
+      |         ^~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+07ccf93
