@@ -31,16 +31,10 @@ Node * createNode(void * data) {
 List * createList() {
   
   List *list = NULL;
-  
   list = (List *) malloc (sizeof(List));
 
-  list->head = (Node *) malloc (sizeof(Node));
   list->head = NULL;
-  
-  list->current = (Node *) malloc (sizeof(Node));
   list->current = NULL;
-  
-  list->tail = (Node *) malloc (sizeof(Node));
   list->tail = NULL;
   
      return list;
@@ -48,7 +42,7 @@ List * createList() {
 
 void * firstList(List * list) {
   
-  
+  list->current->next = list->head;
     return list->head->data;
 }
 
