@@ -81,7 +81,7 @@ void * prevList(List * list) {
 
   }
 
-  list->current = list->current->prev->data;
+  list->current = list->current->prev;
     return list->current->prev->data;
 }
 
