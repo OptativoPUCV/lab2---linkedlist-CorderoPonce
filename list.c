@@ -178,6 +178,7 @@ void * popCurrent(List * list) {
     }
     else
     {
+      free(list->current);
       return aux;
     }
   }
